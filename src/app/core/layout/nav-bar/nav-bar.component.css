@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title-container {
+    width: 35%;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: rowd;
+
+}
