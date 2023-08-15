@@ -6,6 +6,8 @@ import { StudentInterface } from 'src/app/interfaces/student-interface';
 import { StudentsDataSource } from 'src/app/services/students.dataSource';
 import { StudentsService } from 'src/app/services/students.service';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { StudentPopupComponent } from '../student-popup/student-popup.component';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +22,7 @@ export class HomeComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private studentsService: StudentsService) {
+  constructor(private studentsService: StudentsService,private dialogRef : MatDialog ) {
     this.studentsService.fetchStudents().subscribe((data) => {
       this.postData = data;
       this.dataSource = new MatTableDataSource(this.postData);
@@ -32,10 +34,12 @@ export class HomeComponent {
   }
   onRowClick(row: any) {
     console.log('Single click:', row);
+    this.dialogRef.open(StudentPopupComponent,row);
   }
 
   onRowDoubleClick(row: any) {
-    console.log('Double click:', row);
+    // console.log('Double click:', row);
+    this.dialogRef.open(StudentPopupComponent,row);
   }
 
   // applyFilter(event : Event) {
