@@ -2,14 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -21,7 +25,10 @@ import { StudentRegistrationComponent } from './pages/student-registration/stude
 import { HomeComponent } from './pages/home/home.component';
 import { StudentUpdateComponent } from './pages/student-update/student-update.component';
 import { AboutComponent } from './pages/about/about.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { StudentsService } from './services/students.service';
+import { StudentsDataSource } from './services/students.dataSource';
+
 
 
 
@@ -50,13 +57,16 @@ import {HttpClientModule} from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
-
-
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule
 
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [StudentsService, StudentsDataSource],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

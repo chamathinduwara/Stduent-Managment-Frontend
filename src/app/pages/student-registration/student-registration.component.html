@@ -1,1 +1,158 @@
-<p>student-registration works!</p>
+<form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="field">
+      <mat-label class="label">First Name</mat-label>
+      <input
+      matInput
+        type="text"
+        class="input"
+        formControlName="firstName"
+        [class.invalid]="
+          registerForm.get('firstName')?.invalid &&
+          (registerForm.get('firstName')?.dirty ||
+            registerForm.get('firstName')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        *ngIf="
+          registerForm.get('firstName')?.hasError('required') &&
+          (registerForm.get('firstName')?.dirty ||
+            registerForm.get('firstName')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+        >This field is required.</span
+      >
+    </mat-form-field>
+    <mat-form-field class="field">
+        <mat-label class="label">Last Name</mat-label>
+        <input
+        matInput
+          type="text"
+          class="input"
+          formControlName="lastName"
+          [class.invalid]="
+            registerForm.get('lastName')?.invalid &&
+            (registerForm.get('lastName')?.dirty ||
+              registerForm.get('lastName')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          *ngIf="
+            registerForm.get('lastName')?.hasError('required') &&
+            (registerForm.get('lastName')?.dirty ||
+              registerForm.get('lastName')?.touched ||
+              isSubmitted)
+          "
+          class="error"
+          >This field is required.</span
+        >
+      </mat-form-field>
+    
+    <mat-form-field class="field">
+        <mat-label class="label">Mobile</mat-label>
+        <input
+        matInput
+          type="text"
+          class="input"
+          formControlName="mobile"
+          [class.invalid]="
+            registerForm.get('mobile')?.invalid &&
+            (registerForm.get('mobile')?.dirty ||
+              registerForm.get('mobile')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          *ngIf="
+            registerForm.get('mobile')?.hasError('required') &&
+            (registerForm.get('mobile')?.dirty ||
+              registerForm.get('mobile')?.touched ||
+              isSubmitted)
+          "
+          class="error"
+          >This field is required.</span
+        >
+      </mat-form-field>
+      
+    <mat-form-field class="field">
+      <mat-label class="label">email</mat-label>
+      <input
+      matInput
+        type="text"
+        class="input"
+        formControlName="email"
+        [class.invalid]="
+          registerForm.get('email')?.invalid &&
+          (registerForm.get('email')?.dirty ||
+            registerForm.get('email')?.touched ||
+            isSubmitted)
+        "
+      />
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label class="label">NIC</mat-label>
+        <input
+        matInput
+          type="text"
+          class="input"
+          formControlName="nic"
+          [class.invalid]="
+            registerForm.get('nic')?.invalid &&
+            (registerForm.get('nic')?.dirty ||
+              registerForm.get('nic')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          *ngIf="
+            registerForm.get('nic')?.hasError('required') &&
+            (registerForm.get('nic')?.dirty ||
+              registerForm.get('nic')?.touched ||
+              isSubmitted)
+          "
+          class="error"
+          >This field is required.</span
+        >
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field class="field">
+        <mat-label class="label">Address</mat-label>
+        <input
+        matInput
+          type="text"
+          class="input"
+          formControlName="address"
+          [class.invalid]="
+            registerForm.get('address')?.invalid &&
+            (registerForm.get('address')?.dirty ||
+              registerForm.get('address')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          *ngIf="
+            registerForm.get('address')?.hasError('required') &&
+            (registerForm.get('address')?.dirty ||
+              registerForm.get('address')?.touched ||
+              isSubmitted)
+          "
+          class="error"
+          >This field is required.</span
+        >
+      </mat-form-field>
+    <div>
+      <button mat-raised-button type="submit" class="button">Register</button>
+    </div>
+  </form>
