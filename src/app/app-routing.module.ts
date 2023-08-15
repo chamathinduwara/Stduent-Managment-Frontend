@@ -4,6 +4,7 @@ import { StudentRegistrationComponent } from './pages/student-registration/stude
 import { HomeComponent } from './pages/home/home.component';
 import { StudentUpdateComponent } from './pages/student-update/student-update.component';
 import { AboutComponent } from './pages/about/about.component';
+import { StudentDeleteComponent } from './pages/student-delete/student-delete.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     component:AboutComponent,
     path: "about"
+  },
+  {
+    component: StudentDeleteComponent,
+    path: "delete"
   }
 ];
 

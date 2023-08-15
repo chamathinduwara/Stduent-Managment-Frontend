@@ -14,6 +14,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 import { AppComponent } from './app.component';
@@ -28,6 +30,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentsService } from './services/students.service';
 import { StudentsDataSource } from './services/students.dataSource';
+import { StudentDeleteComponent } from './pages/student-delete/student-delete.component';
+import { StudentPopupComponent } from './pages/student-popup/student-popup.component';
 
 
 
@@ -43,6 +47,8 @@ import { StudentsDataSource } from './services/students.dataSource';
     HomeComponent,
     StudentUpdateComponent,
     AboutComponent,
+    StudentDeleteComponent,
+    StudentPopupComponent,
 
   ],
   imports: [
@@ -62,7 +68,8 @@ import { StudentsDataSource } from './services/students.dataSource';
     MatNativeDateModule,
     ReactiveFormsModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
 
 
   ],
