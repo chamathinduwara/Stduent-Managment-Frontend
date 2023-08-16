@@ -1,16 +1,16 @@
-mat-sidenav-container {
+/* mat-sidenav-container {
     height: calc(95vh - 65px);
   }
 
   mat-sidenav {
     margin: 16px;
     width: 150px;
-    /* border-right: none; */
+    border-right: none;
     background: #a4b1c0;
     color: white;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     padding: 16px;
-    /* text-align: center; */
+    text-align: center;
   }
 
   .side-container {
@@ -19,4 +19,42 @@ mat-sidenav-container {
     align-items: center;
     justify-content: center;
 
+  } */
+
+  /* Apply some basic styles to the sidebar component */
+.mat-sidenav-container {
+  height: 100%;
+}
+
+/* Style for the sidebar */
+.mat-sidenav {
+  width: 100px; /* Adjust the width as needed */
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style for the links within the sidebar */
+.side-container a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.side-container a:hover {
+  background-color: #555;
+}
+
+/* Set active link style */
+.side-container a.router-link-active {
+  background-color: #555;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .mat-sidenav {
+    width: 100%;
   }
+}
+

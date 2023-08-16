@@ -32,6 +32,7 @@ import { StudentsService } from './services/students.service';
 import { StudentsDataSource } from './services/students.dataSource';
 import { StudentDeleteComponent } from './pages/student-delete/student-delete.component';
 import { StudentPopupComponent } from './pages/student-popup/student-popup.component';
+import { StudentUpdatePopupComponent } from './pages/student-update-popup/student-update-popup.component';
 
 
 
@@ -49,6 +50,7 @@ import { StudentPopupComponent } from './pages/student-popup/student-popup.compo
     AboutComponent,
     StudentDeleteComponent,
     StudentPopupComponent,
+    StudentUpdatePopupComponent,
 
   ],
   imports: [

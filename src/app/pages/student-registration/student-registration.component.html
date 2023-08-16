@@ -1,5 +1,9 @@
+<div class="registration-container">
+
+
 <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="field">
+  <div class="input-container">
+  <mat-form-field class="field">
       <mat-label class="label">First Name</mat-label>
       <input
       matInput
@@ -118,8 +122,8 @@
         >
       </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Date Of Birth</mat-label>
+      <mat-form-field class="field">
+        <mat-label class="label">Date Of Birth</mat-label>
         <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -152,7 +156,10 @@
           >This field is required.</span
         >
       </mat-form-field>
+      </div>
     <div>
       <button mat-raised-button type="submit" class="button">Register</button>
     </div>
   </form>
+
+</div>
