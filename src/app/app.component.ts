@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { StudentsService } from './services/students.service';
+// import { NavBarModule } from './core/layout/nav-bar/nav-bar.module';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+// platformBrowserDynamic().bootstrapModule(NavBarModule)
+//   .catch(err => console.error(err));
+
 
 
 @Component({
@@ -9,9 +15,4 @@ import { StudentsService } from './services/students.service';
 })
 export class AppComponent {
 
-  constructor(private service: StudentsService) {
-    this.service.getDate().subscribe(data => {
-      console.log(data)
-    })
-  }
 }

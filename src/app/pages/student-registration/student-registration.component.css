@@ -1,0 +1,70 @@
+.registration-container {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+/* Apply some basic styles to the form */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Adjust the width as needed */
+  margin: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* Style for form fields */
+.field {
+  margin-bottom: 20px;
+}
+
+/* Style for labels */
+.label {
+  font-weight: bold;
+}
+
+/* Style for input fields */
+.input {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Style for invalid input fields */
+.input.invalid {
+  border-color: #f44336;
+}
+
+/* Style for error messages */
+.error {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style for datepicker */
+mat-datepicker-toggle {
+  margin-top: 5px;
+}
+
+/* Style for the submit button */
+.button {
+  background-color: #7a6d6d;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #7a7e81;
+}
+
+.button:active {
+  background-color: #535c69;
+}
+
+.button:focus {
+  outline: none;
+}

@@ -1,0 +1,84 @@
+<div class="popup-container">
+
+<form class="popup-form" [formGroup]="updateForm">
+    <div class="column">
+    <mat-form-field class="field">
+        <mat-label class="label">First Name :- {{studentvalue.firstName}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="firstName"
+        >
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label class="label">Last Name :- {{studentvalue.lastName}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="lastName"
+        >
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label class="label">Mobile :- {{studentvalue.mobile}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="mobile"
+        >
+    </mat-form-field>
+</div>
+<div class="column">
+    <mat-form-field class="field">
+        <mat-label class="label">Email :- {{studentvalue.email}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="email"
+        >
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label class="label">NIC :- {{studentvalue.nic}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="nic"
+        >
+    </mat-form-field>
+
+    <mat-form-field class="filed">
+        <mat-label class="label"> Date Of Birth :- {{studentvalue.dateOfBirth}}</mat-label>
+        <input matInput 
+        [matDatepicker]="picker" 
+        formControlName="dateOfBirth">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <mat-label class="label">Address :- {{studentvalue.address}}</mat-label>
+        <input matInput
+        type="text"
+        class="input"
+        formControlName="address"
+        >
+    </mat-form-field>
+
+</div>
+<div class="column">
+
+    <button mat-button (click)="onUpdate()">update</button>
+    <button mat-button (click)="onDelete()">delete</button>
+    
+    <button mat-button (click)="onClose()">
+        close
+    </button>
+</div>
+</form>
+
+
+
+</div>
