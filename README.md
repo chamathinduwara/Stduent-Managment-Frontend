@@ -6,7 +6,7 @@
 - [Installation](#installation)
 - [Contributing](#contributing)
 ## Description
-
+This project is an Angular-based Student Management System that allows you to view, register, update, and delete student details in a user-friendly interface.
 ## Features
 - See All the Students Details in a table with (paging, sorting, search filter & pagination )
 - Create new Student entity
