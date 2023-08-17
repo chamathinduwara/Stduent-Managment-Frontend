@@ -1,6 +1,5 @@
 # Student Management Frondend
-
-sdf
+![Alt image][]
 ## Table of Contect
 - [Description](#description)
 - [Features](#features)
