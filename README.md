@@ -1,5 +1,5 @@
 # Student Management Frondend
-![Alt Text](Image URL)
+![Alt Text]([Image URL](https://github.com/chamathinduwara/Stduent-Managment-Frontend/blob/main/image.png))
 ## Table of Contect
 - [Description](#description)
 - [Features](#features)
