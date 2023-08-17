@@ -6,7 +6,7 @@ sdf
 - [Features](#features)
 - [Installation](#installation)
 - [Contributing](#contributing)
-## Discription
+## Description
 
 ## Features
 - See All the Students Details in a table with (paging, sorting, search filter & pagination )
